@@ -1,0 +1,6 @@
+Below is an instruction that describes a task based on the given image. Write a response that appropriately completes the request.
+
+### Instruction: 
+Extract all the information present inside the given image. Use python variables or dictionaries to store the information if required. Don't use the word image in your response.
+
+### Response:

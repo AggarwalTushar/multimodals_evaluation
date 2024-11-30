@@ -1,0 +1,1 @@
+{'Model': 'adept/fuyu-8b', 'Prompt': 'Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n\n\n### Response:```Python', 'Temperature': 0.0, 'Max new tokens': 1024, 'Top_P': 0.95, 'Samples': 1, 'Timestamp': datetime.datetime(2023, 11, 27, 8, 24, 51, 828153)}

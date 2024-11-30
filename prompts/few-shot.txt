@@ -1,0 +1,37 @@
+Below is an instruction that describes a task along with a few examples. Write a response that appropriately completes the request.
+
+### Instruction: 
+Extract all the information present inside the given image that can be used by a coding model to solve the following instruction: 
+Which person has the highest BMI value?
+Use python variables or dictionaries to store the information if required. Don't use the word image in your response.
+### Response:
+{
+    "type" : "table",
+    "content" : [
+        {"name": "Philip","gender":"M","age":72.0,"height":150,"BMI":20.34},
+        {"name": "Ronald","gender":"M","age":67.0,"height":133,"BMI":20.83},
+        {"name": "Mary","gender":"F","age":66.5,"height":112,"BMI":17.80},
+        {"name": "William","gender":"M","age":66.5,"height":112,"BMI":17.80},
+        {"name": "Janet","gender":"F","age":62.5,"height":112.5,"BMI":20.25}
+    ]
+}
+
+### Instruction: 
+Extract all the information present inside the given image that can be used by a coding model to solve the following instruction: 
+Count the total number of persons in the image.
+Use python variables or dictionaries to store the information if required. Don't use the word image in your response.
+### Response:
+{
+    "type" : "Office",
+    "content" : {
+        "objects" : ["person", "person", "person","window","table"],
+        "bounding-box" : [[[0,130],[247,351]], [[161,140],[174,245]], [[217,158],[251,310]], [[163,5],[162,129]], [[443,310],[70,182]]]
+    },
+    "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width and the height of the bounding box."
+}
+
+### Instruction:
+Extract all the information present inside the given image that can be used by a coding model to solve the following instruction: 
+{{instruction}}
+Use python variables or dictionaries to store the information if required. Don't use the word image in your response.
+### Response:

@@ -1,0 +1,12 @@
+Below is an instruction that describes a task. Write a response that appropriately completes the request.
+Write the entire code and no other text. The code should be written in Python.
+
+### Instruction:
+{{prompt}}
+
+You need to use the below information to solve the above instruction.
+### Information:
+#{{comment}}
+data = {{info}}
+
+### Response:```Python

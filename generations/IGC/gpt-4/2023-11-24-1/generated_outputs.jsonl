@@ -1,0 +1,819 @@
+[
+    {
+        "instruction": "Which person in the given data has the highest BMI value?",
+        "ideal_information": {
+            "type": "table",
+            "content": [
+                {
+                    "name": "Philip",
+                    "gender": "M",
+                    "age": 72.0,
+                    "height": 150,
+                    "BMI": 20.34
+                },
+                {
+                    "name": "Ronald",
+                    "gender": "M",
+                    "age": 67.0,
+                    "height": 133,
+                    "BMI": 20.83
+                },
+                {
+                    "name": "Mary",
+                    "gender": "F",
+                    "age": 66.5,
+                    "height": 112,
+                    "BMI": 17.8
+                },
+                {
+                    "name": "William",
+                    "gender": "M",
+                    "age": 66.5,
+                    "height": 112,
+                    "BMI": 17.8
+                },
+                {
+                    "name": "Janet",
+                    "gender": "F",
+                    "age": 62.5,
+                    "height": 112.5,
+                    "BMI": 20.25
+                }
+            ]
+        },
+        "output": "max_bmi_person = max(data, key=lambda x:x['BMI'])\nprint(max_bmi_person['name'])",
+        "target": "Ronald",
+        "inference_time": 2.8450002670288086
+    },
+    {
+        "instruction": "What is the value of Voltage(V) in the given circuit. You can use the formula V = IR to calculate the value of Voltage(V). Also note that the unit of Voltage is Volt(V), unit of current is Ampere(A), and unit of resistance is Ohm(\u03a9).",
+        "ideal_information": {
+            "type": "circuit",
+            "content": {
+                "Current(I)": [
+                    "70"
+                ],
+                "Resistance(R)": [
+                    "5"
+                ]
+            }
+        },
+        "output": "data = {'Current(I)': ['70'], 'Resistance(R)': ['5']}\n\nI = int(data['Current(I)'][0])\nR = int(data['Resistance(R)'][0])\n\nV = I * R\nV",
+        "target": "350",
+        "inference_time": 1.7637529373168945
+    },
+    {
+        "instruction": "The value of star is 8, the value of triangle is 2, the value of circle is 6 and the value of rectangle is 4. We have an expression over star, triangle, circle and rectangle which uses mathematical operations of addition (+), subtraction (-), equality (=) and question mark (?). Find the value of the expression denoted by question mark (?).",
+        "ideal_information": {
+            "type": "mathematical-expression",
+            "content": {
+                "objects": [
+                    "star",
+                    "triangle",
+                    "circle",
+                    "rectangle"
+                ],
+                "expression": [
+                    "triangle + circle - star + rectangle"
+                ]
+            }
+        },
+        "output": "# Define the values of the objects\nstar = 8\ntriangle = 2\ncircle = 6\nrectangle = 4\n\n# Define the data dictionary\ndata = {'objects': ['star', 'triangle', 'circle', 'rectangle'], 'expression': ['triangle + circle - star + rectangle']}\n\n# Evaluate the expression\nresult = eval(data['expression'][0])\n\nresult",
+        "target": "4",
+        "inference_time": 75.613614320755
+    },
+    {
+        "instruction": "Find the shortest distance between vertices 0 and 3. The green color nodes represent the vertices, the lines represent edges and the numbers written over lines represent distance between the corresponding vertices.",
+        "ideal_information": {
+            "type": "graph",
+            "content": {
+                "vertices": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "edges": [
+                    [
+                        0,
+                        1
+                    ],
+                    [
+                        0,
+                        2
+                    ],
+                    [
+                        1,
+                        3
+                    ],
+                    [
+                        2,
+                        3
+                    ]
+                ],
+                "distance": [
+                    2,
+                    6,
+                    5,
+                    8
+                ]
+            }
+        },
+        "output": "import heapq\n\ndef shortest_path(data, start, end):\n    queue = []\n    heapq.heappush(queue, (0, start))\n    distances = {vertex: float('infinity') for vertex in data['vertices']}\n    distances[start] = 0\n    while queue:\n        current_distance, current_vertex = heapq.heappop(queue)\n        if distances[current_vertex] < current_distance:\n            continue\n        for edge, distance in zip(data['edges'], data['distance']):\n            if current_vertex in edge:\n                next_vertex = edge[1] if edge[0] == current_vertex else edge[0]\n                distance = current_distance + distance\n                if distance < distances[next_vertex]:\n                    distances[next_vertex] = distance\n                    heapq.heappush(queue, (distance, next_vertex))\n    return distances[end]\n\ndata = {'vertices': [0, 1, 2, 3], 'edges': [[0, 1], [0, 2], [1, 3], [2, 3]], 'distance': [2, 6, 5, 8]}\nprint(shortest_path(data, 0, 3))",
+        "target": "7",
+        "inference_time": 9.631614685058594
+    },
+    {
+        "instruction": "You are given a\u00a02 x 2\u00a0integer matrix\u00a0board\u00a0where the cells are labeled from 1 to 4 in a\u00a0Boustrophedon style\u00a0starting from the bottom left of the board (i.e.\u00a0board[1][0]) and alternating direction each row. You start on square numbered\u00a01\u00a0of the board. In each move, starting from square\u00a0curr, do the following: \n1. Choose a destination square\u00a0next\u00a0with a label in the range\u00a0[curr + 1, min(curr + 6, 4)] \n2. If next has a snake or ladder, you must move to the destination of that snake or ladder. Otherwise, you move to\u00a0next.\n3. The game ends when you reach 4.\nOutput the minimum number of moves required to reach the square 4. If it is not possible to reach the square, return\u00a0-1",
+        "ideal_information": {
+            "type": "grid",
+            "content": {
+                "board": [
+                    [
+                        -1,
+                        -1
+                    ],
+                    [
+                        -1,
+                        4
+                    ]
+                ]
+            },
+            "comment": "-1 denotes a normal cell, if the cell has a snake or ladder, then it contains the destination cell for that snake or ladder. For example, the cell number 2 has value 4, which denotes that there is a ladder from cell 2 to cell 4."
+        },
+        "output": "def min_moves(data):\n    board = data['board']\n    N = len(board)\n    dist = [float('inf')] * N * N\n    dist[1] = 0\n    for i in range(1, N * N):\n        for j in range(1, min(6, N * N - i) + 1):\n            x, y = divmod(i + j, N)\n            if x % 2 == 0:\n                y = N - 1 - y\n            next = board[N - 1 - x][y]\n            if next > -1:\n                dist[next] = min(dist[next], dist[i] + 1)\n            else:\n                dist[i + j] = min(dist[i + j], dist[i] + 1)\n    return dist[N * N - 1] if dist[N * N - 1] < float('inf') else -1\n\ndata = {'board': [[-1, -1], [-1, 4]]}\nprint(min_moves(data))",
+        "target": "1",
+        "inference_time": 65.68798112869263
+    },
+    {
+        "instruction": "Count the total number of persons.",
+        "ideal_information": {
+            "type": "Office",
+            "content": {
+                "objects": [
+                    "person",
+                    "person",
+                    "person",
+                    "window",
+                    "table"
+                ],
+                "bounding-box": [
+                    [
+                        [
+                            0,
+                            130
+                        ],
+                        [
+                            247,
+                            351
+                        ]
+                    ],
+                    [
+                        [
+                            161,
+                            140
+                        ],
+                        [
+                            174,
+                            245
+                        ]
+                    ],
+                    [
+                        [
+                            217,
+                            158
+                        ],
+                        [
+                            251,
+                            310
+                        ]
+                    ],
+                    [
+                        [
+                            163,
+                            5
+                        ],
+                        [
+                            162,
+                            129
+                        ]
+                    ],
+                    [
+                        [
+                            443,
+                            310
+                        ],
+                        [
+                            70,
+                            182
+                        ]
+                    ]
+                ]
+            },
+            "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width of the bounding box."
+        },
+        "output": "data = {'objects': ['person', 'person', 'person', 'window', 'table'], 'bounding-box': [[[0, 130], [247, 351]], [[161, 140], [174, 245]], [[217, 158], [251, 310]], [[163, 5], [162, 129]], [[443, 310], [70, 182]]]}\n\ntotal_persons = data['objects'].count('person')\nprint(total_persons)",
+        "target": "3",
+        "inference_time": 8.20962142944336
+    },
+    {
+        "instruction": "Is the following statement true or false? The largest planet is made mainly of ice.",
+        "ideal_information": {
+            "type": "Table",
+            "content": [
+                {
+                    "Planet": "Mercury",
+                    "Volume (billions of km\u00b3)": 60,
+                    "Primary composition": "rock"
+                },
+                {
+                    "Planet": "Venus",
+                    "Volume (billions of km\u00b3)": 930,
+                    "Primary composition": "rock"
+                },
+                {
+                    "Planet": "Earth",
+                    "Volume (billions of km\u00b3)": 1090,
+                    "Primary composition": "rock"
+                },
+                {
+                    "Planet": "Mars",
+                    "Volume (billions of km\u00b3)": 160,
+                    "Primary composition": "rock"
+                },
+                {
+                    "Planet": "Jupiter",
+                    "Volume (billions of km\u00b3)": 1431280,
+                    "Primary composition": "gas"
+                },
+                {
+                    "Planet": "Saturn",
+                    "Volume (billions of km\u00b3)": 827130,
+                    "Primary composition": "gas"
+                },
+                {
+                    "Planet": "Uranus",
+                    "Volume (billions of km\u00b3)": 68330,
+                    "Primary composition": "ice"
+                },
+                {
+                    "Planet": "Neptune",
+                    "Volume (billions of km\u00b3)": 62530,
+                    "Primary composition": "ice"
+                }
+            ]
+        },
+        "output": "# Find the planet with the largest volume\nlargest_planet = max(data, key=lambda x:x['Volume (billions of km\u00b3)'])\n\n# Check if the largest planet is made mainly of ice\nlargest_planet_is_ice = largest_planet['Primary composition'] == 'ice'\n\nprint(largest_planet_is_ice)",
+        "target": "False",
+        "inference_time": 45.06648230552673
+    },
+    {
+        "instruction": "Will these magnets attract or repel each other? Answer True for attract and False for repel.",
+        "ideal_information": {
+            "type": "magnets",
+            "content": {
+                "objects": [
+                    "magnet",
+                    "magnet"
+                ],
+                "directions": [
+                    [
+                        "south",
+                        "north"
+                    ],
+                    [
+                        "south",
+                        "north"
+                    ]
+                ],
+                "bounding-box": [
+                    [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            184,
+                            52
+                        ]
+                    ],
+                    [
+                        [
+                            335,
+                            0
+                        ],
+                        [
+                            185,
+                            52
+                        ]
+                    ]
+                ]
+            },
+            "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width of the bounding box."
+        },
+        "output": "def will_attract_or_repel(data):\n    if data['objects'] == ['magnet', 'magnet']:\n        if data['directions'][0] != data['directions'][1]:\n            return True\n        else:\n            return False\n\nprint(will_attract_or_repel(data))",
+        "target": "True",
+        "inference_time": 12.534019470214844
+    },
+    {
+        "instruction": "Which month is the hottest on average in Rome?",
+        "ideal_information": {
+            "type": "LineChart",
+            "content": {
+                "Title": "Average temperature in Rome, Italy",
+                "Month": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sept",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "Temperature (\u00b0C)": [
+                    8,
+                    9,
+                    10,
+                    13,
+                    16,
+                    21,
+                    24,
+                    24,
+                    21,
+                    16,
+                    13,
+                    10
+                ]
+            }
+        },
+        "output": "# Create a dictionary with the data\ndata = {'Title': 'Average temperature in Rome, Italy', \n        'Month': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'], \n        'Temperature (\u00b0C)': [8, 9, 10, 13, 16, 21, 24, 24, 21, 16, 13, 10]}\n\n# Find the index of the maximum temperature\nmax_temp_index = data['Temperature (\u00b0C)'].index(max(data['Temperature (\u00b0C)']))\n\n# Print the month with the maximum temperature\nprint(data['Month'][max_temp_index])",
+        "target": "July and August",
+        "inference_time": 62.42164993286133
+    },
+    {
+        "instruction": "Which month is the wettest on average in Christchurch?",
+        "ideal_information": {
+            "type": "BarChart",
+            "content": {
+                "Title": "Average precipiation in Christchurch, New Zealand",
+                "Month": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sept",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "Precipiation (mm)": [
+                    52,
+                    45,
+                    52,
+                    51,
+                    69,
+                    67,
+                    67,
+                    52,
+                    45,
+                    45,
+                    48,
+                    55
+                ]
+            }
+        },
+        "output": "import pandas as pd\n\ndata = {'Title': 'Average precipiation in Christchurch, New Zealand', 'Month': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'], 'Precipiation (mm)': [52, 45, 52, 51, 69, 67, 67, 52, 45, 45, 48, 55]}\ndf = pd.DataFrame(data)\nwettest_month = df[df['Precipiation (mm)'] == df['Precipiation (mm)'].max()]['Month'].values[0]\nwettest_month",
+        "target": "May",
+        "inference_time": 7.109241485595703
+    },
+    {
+        "instruction": "Which solution has a higher concentration of green particles?",
+        "ideal_information": {
+            "type": "Containers",
+            "content": {
+                "Solutions": [
+                    "A",
+                    "B"
+                ],
+                "Volume": [
+                    50,
+                    50
+                ],
+                "Density": [
+                    5,
+                    12
+                ]
+            }
+        },
+        "output": "import pandas as pd\n\ndata = {'Solutions': ['A', 'B'], 'Volume': [50, 50], 'Density': [5, 12]}\ndf = pd.DataFrame(data)\n\ndf['Concentration'] = df['Density'] / df['Volume']\nsolution_with_highest_concentration = df.loc[df['Concentration'].idxmax()]['Solutions']\n\nprint(solution_with_highest_concentration)",
+        "target": "Solution B",
+        "inference_time": 58.736581325531006
+    },
+    {
+        "instruction": "Based on the Venn diagram, what things do Leonardo da Vinci and Michelangelo have in common?",
+        "ideal_information": {
+            "type": "VennDiagram",
+            "content": {
+                "Leonardo da Vinci": [
+                    "known for scientific work",
+                    "created the Mona Lisa",
+                    "late 15th-early 16th century",
+                    "known for painting",
+                    "from Florence"
+                ],
+                "Michelangelo": [
+                    "late 15th-early 16th century",
+                    "known for painting",
+                    "from Florence",
+                    "known for sculpting",
+                    "created David"
+                ]
+            }
+        },
+        "output": "common_things = list(set(data['Leonardo da Vinci']) & set(data['Michelangelo']))\nprint(common_things)",
+        "target": "[late 15th-early 16th century, known for painting, from Florence]",
+        "inference_time": 1.865082025527954
+    },
+    {
+        "instruction": "What is the color of the headphones present on the left side?",
+        "ideal_information": {
+            "type": "Two Headphones",
+            "content": {
+                "objects": [
+                    "headphone",
+                    "headphone"
+                ],
+                "colors": [
+                    "White",
+                    "Black"
+                ],
+                "bounding-box": [
+                    [
+                        [
+                            80,
+                            15
+                        ],
+                        [
+                            532,
+                            834
+                        ]
+                    ],
+                    [
+                        [
+                            644,
+                            15
+                        ],
+                        [
+                            655,
+                            844
+                        ]
+                    ]
+                ]
+            },
+            "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width of the bounding box."
+        },
+        "output": "data = {'objects': ['headphone', 'headphone'], 'colors': ['White', 'Black'], 'bounding-box': [[[80, 15], [532, 834]], [[644, 15], [655, 844]]]}\n\n# Find the index of the headphone with the smallest x1 value\nleft_headphone_index = data['bounding-box'].index(min(data['bounding-box'], key=lambda x: x[0][0]))\n\n# Get the color of the headphone on the left\nleft_headphone_color = data['colors'][left_headphone_index]\n\nprint(left_headphone_color)",
+        "target": "White",
+        "inference_time": 62.084338903427124
+    },
+    {
+        "instruction": "Calculate the length of the hypotenuse of the right-angled triangle.",
+        "ideal_information": {
+            "type": "Right Angled Triangle",
+            "content": {
+                "Base": 6,
+                "Height": 8,
+                "Hyptenuse": "?"
+            }
+        },
+        "output": "import math\n\ndata = {'Base': 6, 'Height': 8, 'Hyptenuse': '?'}\n\ndata['Hyptenuse'] = math.sqrt(data['Base']**2 + data['Height']**2)\n\nprint(data)",
+        "target": "10",
+        "inference_time": 2.3957479000091553
+    },
+    {
+        "instruction": "Find the value of the expression denoted by question mark (?).",
+        "ideal_information": {
+            "type": "mathematical-expression",
+            "content": {
+                "expression": [
+                    "(3 + sqrt(4))"
+                ]
+            }
+        },
+        "output": "import math\n\ndata = {'expression': ['(3 + math.sqrt(4))']}\neval(data['expression'][0])",
+        "target": "5",
+        "inference_time": 56.85911846160889
+    },
+    {
+        "instruction": "Find the value of the expression denoted by question mark (?).",
+        "ideal_information": {
+            "type": "mathematical-expression",
+            "content": {
+                "expression": [
+                    "6*(2 + 3)"
+                ]
+            }
+        },
+        "output": "# Python code\ndata = {'expression': ['6*(2 + 3)']}\nexpression = data['expression'][0]\nvalue = eval(expression)\nvalue",
+        "target": "30",
+        "inference_time": 7.101775884628296
+    },
+    {
+        "instruction": "According to the given schedule, what are you going to do at 11 am on Friday?",
+        "ideal_information": {
+            "type": "Schedule",
+            "content": [
+                [
+                    "Monday",
+                    "10:30-11:00am",
+                    "visit Uncle Peter in General Hospital"
+                ],
+                [
+                    "Tuesday",
+                    "2:00-4:00pm",
+                    "swimming class"
+                ],
+                [
+                    "Wednesday",
+                    "12:00-6:00pm",
+                    "part-time job"
+                ],
+                [
+                    "Thursday",
+                    "10:30-11:30am, 12:00-5:00pm",
+                    "Appointment Mr. Green"
+                ],
+                [
+                    "Friday",
+                    "11:00am",
+                    "go to the airport to meet Sam"
+                ],
+                [
+                    "Saturday",
+                    "10:00-12:00am",
+                    "Meet Dave to study for test"
+                ],
+                [
+                    "Sunday",
+                    "5:00-7:00pm",
+                    "Birthday party for Kate"
+                ]
+            ]
+        },
+        "output": "for day in data:\n    if day[0] == 'Friday' and day[1] == '11:00am':\n        print(day[2])",
+        "target": "go to the airport to meet Sam",
+        "inference_time": 56.91447401046753
+    },
+    {
+        "instruction": "Are the two balls touching each other? Answer in Yes or No.",
+        "ideal_information": {
+            "type": "Ground",
+            "content": {
+                "objects": [
+                    "Ball",
+                    "Ball"
+                ],
+                "bounding-box": [
+                    [
+                        [
+                            237,
+                            409
+                        ],
+                        [
+                            527,
+                            489
+                        ]
+                    ],
+                    [
+                        [
+                            780,
+                            191
+                        ],
+                        [
+                            414,
+                            372
+                        ]
+                    ]
+                ],
+                "colors": [
+                    "Green",
+                    "Green"
+                ]
+            },
+            "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width of the bounding box."
+        },
+        "output": "def are_balls_touching(data):\n    box1 = data['bounding-box'][0]\n    box2 = data['bounding-box'][1]\n    \n    # Check if box1 is to the right of box2\n    if box1[0][0] > box2[0][0] + box2[1][0]:\n        return \"No\"\n    # Check if box1 is to the left of box2\n    if box1[0][0] + box1[1][0] < box2[0][0]:\n        return \"No\"\n    # Check if box1 is above box2\n    if box1[0][1] > box2[0][1] + box2[1][1]:\n        return \"No\"\n    # Check if box1 is below box2\n    if box1[0][1] + box1[1][1] < box2[0][1]:\n        return \"No\"\n    \n    return \"Yes\"\n\ndata = {'objects': ['Ball', 'Ball'], 'bounding-box': [[[237, 409], [527, 489]], [[780, 191], [414, 372]]], 'colors': ['Green', 'Green']}\nprint(are_balls_touching(data))",
+        "target": "No",
+        "inference_time": 14.196572065353394
+    },
+    {
+        "instruction": "Is there flag present? Answer in Yes or No.",
+        "ideal_information": {
+            "type": "Ground",
+            "content": {
+                "objects": [
+                    "Flag",
+                    "Person",
+                    "Book"
+                ],
+                "bounding-box": [
+                    [
+                        [
+                            355,
+                            296
+                        ],
+                        [
+                            469,
+                            329
+                        ]
+                    ],
+                    [
+                        [
+                            358,
+                            0
+                        ],
+                        [
+                            577,
+                            625
+                        ]
+                    ],
+                    [
+                        [
+                            474,
+                            170
+                        ],
+                        [
+                            313,
+                            209
+                        ]
+                    ]
+                ]
+            },
+            "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width of the bounding box."
+        },
+        "output": "if 'Flag' in data['objects']:\n    print('Yes')\nelse:\n    print('No')",
+        "target": "Yes",
+        "inference_time": 57.57390904426575
+    },
+    {
+        "instruction": "Is the leftmost person holding a flag? Answer in Yes or No.",
+        "ideal_information": {
+            "type": "Patriotic",
+            "content": {
+                "objects": [
+                    "Person",
+                    "Flag",
+                    "Person",
+                    "Flag"
+                ],
+                "bounding-box": [
+                    [
+                        [
+                            138,
+                            126
+                        ],
+                        [
+                            106,
+                            263
+                        ]
+                    ],
+                    [
+                        [
+                            0,
+                            45
+                        ],
+                        [
+                            252,
+                            195
+                        ]
+                    ],
+                    [
+                        [
+                            248,
+                            126
+                        ],
+                        [
+                            124,
+                            263
+                        ]
+                    ],
+                    [
+                        [
+                            256,
+                            0
+                        ],
+                        [
+                            185,
+                            255
+                        ]
+                    ]
+                ]
+            },
+            "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width of the bounding box."
+        },
+        "output": "objects = data['objects']\nbounding_boxes = data['bounding-box']\n\n# Find the index of the leftmost person\nleftmost_person_index = min((box[0][0], index) for index, (box, obj) in enumerate(zip(bounding_boxes, objects)) if obj == 'Person')[1]\n\n# Check if the leftmost person is holding a flag\nif leftmost_person_index + 1 < len(objects) and objects[leftmost_person_index + 1] == 'Flag':\n    print('Yes')\nelse:\n    print('No')",
+        "target": "Yes",
+        "inference_time": 3.6011734008789062
+    },
+    {
+        "instruction": "Find the value of blue cone.",
+        "ideal_information": {
+            "type": "mathematical-expression",
+            "content": {
+                "objects": [
+                    "blue_cone",
+                    "pink_cone"
+                ],
+                "expression1": [
+                    "blue_cone + pink_cone + pink_cone = 24"
+                ],
+                "expression2": [
+                    "pink_cone - blue_cone = 6"
+                ]
+            },
+            "comment": "The above two equations can be break down to solve the following two linear equations: x + 2y = 24 and y - x = 6, where y denotes the value of pink_cone and x denotes the value of blue_cone."
+        },
+        "output": "from sympy import symbols, Eq, solve\n\n# define the symbols\nblue_cone, pink_cone = symbols('blue_cone pink_cone')\n\n# define the equations\neq1 = Eq(blue_cone + 2*pink_cone, 24)\neq2 = Eq(pink_cone - blue_cone, 6)\n\n# solve the equations\nsolution = solve((eq1,eq2), (blue_cone, pink_cone))\n\n# print the value of blue_cone\nprint(solution[blue_cone])",
+        "target": "4",
+        "inference_time": 61.16842603683472
+    },
+    {
+        "instruction": "What is the area of the given right angled triangle. You can use the formula A = 1/2 * b * h to calculate the area of the triangle. Output the numerical value only.",
+        "ideal_information": {
+            "type": "Right Angled Triangle",
+            "content": {
+                "Base": 15,
+                "Height": 20
+            }
+        },
+        "output": "data = {'Base': 15, 'Height': 20}\nA = 1/2 * data['Base'] * data['Height']\nprint(A)",
+        "target": "150",
+        "inference_time": 1.8681375980377197
+    },
+    {
+        "instruction": "Output the sum of numbers present in the given matrix.",
+        "ideal_information": {
+            "type": "grid",
+            "content": {
+                "matrix": [
+                    [
+                        12,
+                        13
+                    ],
+                    [
+                        21,
+                        22
+                    ]
+                ]
+            }
+        },
+        "output": "sum(sum(data['matrix'], []))",
+        "target": "68",
+        "inference_time": 56.684820890426636
+    },
+    {
+        "instruction": "Count the number of ocurrances of the word 'is' in the given paragraph.",
+        "ideal_information": {
+            "type": "paragraph",
+            "content": {
+                "text": "Recently, I had the pleasure of seeing one of William Shakespeare's most beloved comedies, A Midsummer Night's Dream, performed beautifully at the Los Angeles Repertory Theatre in downtown Los Angeles. At first glance, this performance space looks more like an industrial warehouse than an art house, but walking in you are transformed to the magical land of Midsummer."
+            }
+        },
+        "output": "data['text'].lower().split().count('is')",
+        "target": "0",
+        "inference_time": 5.937007188796997
+    },
+    {
+        "instruction": "Find the value of question mark (?) in the given expression.",
+        "ideal_information": {
+            "type": "mathematical-expression",
+            "content": {
+                "expression1": [
+                    "1 + 4 = 5"
+                ],
+                "expression2": [
+                    "2 + 5 = 12"
+                ],
+                "expression3": [
+                    "3 + 6 = 21"
+                ],
+                "expression4": [
+                    "8 + 11"
+                ]
+            },
+            "comment": "The above 4 equations can be bread down to solve the function f such that f(1,4) = 5; f(2,5) = 12; f(3,6) = 21. The value of f(8,11) is the value of question mark (?) in the given expression."
+        },
+        "output": "def f(x, y):\n    return x * y\n\ndata = {'expression1': ['1 + 4 = 5'], 'expression2': ['2 + 5 = 12'], 'expression3': ['3 + 6 = 21'], 'expression4': ['8 + 11']}\n\nexpression4 = data['expression4'][0].split(' ')\nx = int(expression4[0])\ny = int(expression4[2])\n\nresult = f(x, y)\nprint(result)",
+        "target": "96",
+        "inference_time": 60.2314248085022
+    }
+]

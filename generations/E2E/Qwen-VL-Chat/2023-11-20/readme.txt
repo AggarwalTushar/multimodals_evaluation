@@ -1,0 +1,1 @@
+{'Model': 'Qwen/Qwen-VL-Chat', 'Prompt': 'Below is an instruction that describes a task based on the given image. Write a response that appropriately completes the request.\n\n### Instruction: \n\n\n### Response: ', 'Temperature': 0.0, 'Max new tokens': 2048, 'Top_P': 0.95, 'Samples': 1, 'Timestamp': datetime.datetime(2023, 11, 20, 10, 22, 49, 651385)}

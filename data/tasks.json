@@ -1,0 +1,356 @@
+[
+    {
+        "instruction" : "Which person in the given data has the highest BMI value?",
+        "image" : "Picture1.png",
+        "target" : "Ronald",
+        "source" : "Touchstone",
+        "ideal_grounding" : {
+            "type" : "table",
+            "content" : [
+                {"name": "Philip","gender":"M","age":72.0,"height":150,"BMI":20.34},
+                {"name": "Ronald","gender":"M","age":67.0,"height":133,"BMI":20.83},
+                {"name": "Mary","gender":"F","age":66.5,"height":112,"BMI":17.80},
+                {"name": "William","gender":"M","age":66.5,"height":112,"BMI":17.80},
+                {"name": "Janet","gender":"F","age":62.5,"height":112.5,"BMI":20.25}
+            ]
+        }
+    },
+    {
+        "instruction" : "What is the value of Voltage(V) in the given circuit. You can use the formula V = IR to calculate the value of Voltage(V). Also note that the unit of Voltage is Volt(V), unit of current is Ampere(A), and unit of resistance is Ohm(Ω).",
+        "image" : "Picture2.png",
+        "target" : "350",
+        "source" : "Touchstone",
+        "ideal_grounding" : {
+            "type" : "circuit",
+            "content" : {
+                "Current(I)" : ["70"],
+                "Resistance(R)" : ["5"]
+            }
+        }
+    },
+    {
+        "instruction" : "The value of star is 8, the value of triangle is 2, the value of circle is 6 and the value of rectangle is 4. We have an expression over star, triangle, circle and rectangle which uses mathematical operations of addition (+), subtraction (-), equality (=) and question mark (?). Find the value of the expression denoted by question mark (?).",
+        "image" : "Picture3.png",
+        "target" : "4" ,
+        "source" : "Google",
+        "ideal_grounding" : {
+            "type" : "mathematical-expression",
+            "content" : {
+                "objects": ["star", "triangle", "circle", "rectangle"],
+                "expression" : ["triangle + circle - star + rectangle"]
+            }
+        }
+    },
+    {
+        "instruction" : "Find the shortest distance between vertices 0 and 3. The green color nodes represent the vertices, the lines represent edges and the numbers written over lines represent distance between the corresponding vertices.",
+        "image" : "Picture4.png",
+        "target" : "7",
+        "source" : "GFG",
+        "ideal_grounding" : {
+            "type" : "graph",
+            "content" : {
+                "vertices" : [0, 1, 2, 3],
+                "edges" : [[0,1], [0,2], [1,3], [2,3]],
+                "distance" : [2, 6, 5, 8]
+            }
+        }
+    },
+    {
+        "instruction" : "You are given a 2 x 2 integer matrix board where the cells are labeled from 1 to 4 in a Boustrophedon style starting from the bottom left of the board (i.e. board[1][0]) and alternating direction each row. You start on square numbered 1 of the board. In each move, starting from square curr, do the following: \n1. Choose a destination square next with a label in the range [curr + 1, min(curr + 6, 4)] \n2. If next has a snake or ladder, you must move to the destination of that snake or ladder. Otherwise, you move to next.\n3. The game ends when you reach 4.\nOutput the minimum number of moves required to reach the square 4. If it is not possible to reach the square, return -1",
+        "image" : "Picture5.png",
+        "target" : "1",
+        "source" : "Leetcode",
+        "ideal_grounding" : {
+            "type" : "grid",
+            "content" : {
+                "board" : [[-1,-1],[-1,4]]
+            },
+            "comment" : "-1 denotes a normal cell, if the cell has a snake or ladder, then it contains the destination cell for that snake or ladder. For example, the cell number 2 has value 4, which denotes that there is a ladder from cell 2 to cell 4."
+        }
+    },
+    {
+        "instruction" : "Count the total number of persons.",
+        "image" : "Picture6.png",
+        "target" : "3",
+        "source" : "Google",
+        "ideal_grounding" : {
+            "type" : "Office",
+            "content" : {
+                "objects" : ["person", "person", "person","window","table"],
+                "bounding-box" : [[[0,130],[247,351]], [[161,140],[174,245]], [[217,158],[251,310]], [[163,5],[162,129]], [[443,310],[70,182]]]
+            },
+            "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width and the height of the bounding box."
+        }
+    },
+    {
+        "instruction" : "Is the following statement true or false? The largest planet is made mainly of ice.",
+        "image" : "Picture7.png",
+        "target" : "False",
+        "source" : "ScienceQA",
+        "ideal_grounding" : {
+            "type" : "Table",
+            "content" : [
+                {"Planet":"Mercury","Volume (billions of km³)":60,"Primary composition":"rock"},
+                {"Planet":"Venus","Volume (billions of km³)":930,"Primary composition":"rock"},
+                {"Planet":"Earth","Volume (billions of km³)":1090,"Primary composition":"rock"},
+                {"Planet":"Mars","Volume (billions of km³)":160,"Primary composition":"rock"},
+                {"Planet":"Jupiter","Volume (billions of km³)":1431280,"Primary composition":"gas"},
+                {"Planet":"Saturn","Volume (billions of km³)":827130,"Primary composition":"gas"},
+                {"Planet":"Uranus","Volume (billions of km³)":68330,"Primary composition":"ice"},
+                {"Planet":"Neptune","Volume (billions of km³)":62530,"Primary composition":"ice"}
+            ]
+        }
+    },
+    {
+        "instruction" : "Will these magnets attract or repel each other? Answer True for attract and False for repel.",
+        "image" : "Picture8.png",
+        "target" : "True",
+        "source" : "ScienceQA",
+        "ideal_grounding" : {
+            "type" : "magnets",
+            "content" : {
+                "objects" : ["magnet", "magnet"],
+                "directions" : [["south","north"] , ["south","north"]],
+                "bounding-box" : [[[0,0],[184,52]], [[335,0],[185,52]]]
+            },
+            "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width and the height of the bounding box."
+        }
+    },
+    {
+        "instruction" : "Which month is the hottest on average in Rome?",
+        "image" : "Picture9.png",
+        "target" : "July and August",
+        "source" : "ScienceQA",
+        "ideal_grounding" : {
+            "type" : "LineChart",
+            "content" : {
+                "Title" : "Average temperature in Rome, Italy",
+                "Month" : ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov","Dec"],
+                "Temperature (°C)" : [8, 9, 10, 13, 16, 21, 24, 24, 21, 16, 13, 10]
+            }
+        }
+    },
+    {
+        "instruction" : "Which month is the wettest on average in Christchurch?",
+        "image" : "Picture10.png",
+        "target" : "May",
+        "source" : "ScienceQA",
+        "ideal_grounding" : {
+            "type" : "BarChart",
+            "content" : {
+                "Title" : "Average precipiation in Christchurch, New Zealand",
+                "Month" : ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov","Dec"],
+                "Precipiation (mm)" : [52, 45, 52, 51, 69, 67, 67, 52, 45, 45, 48, 55]
+            }
+        }
+    },
+    {
+        "instruction" : "Which solution has a higher concentration of green particles?",
+        "image" : "Picture11.png",
+        "target" : "Solution B",
+        "source" : "ScienceQA",
+        "ideal_grounding" : {
+            "type" : "Containers",
+            "content" : {
+                "Solutions" : ["A", "B"],
+                "Volume" : [50, 50],
+                "Density" : [5, 12]
+            }
+        }
+    },
+    {
+        "instruction" : "Based on the Venn diagram, what things do Leonardo da Vinci and Michelangelo have in common?",
+        "image" : "Picture12.png",
+        "target" : "[late 15th-early 16th century, known for painting, from Florence]",
+        "source" : "ScienceQA",
+        "ideal_grounding" : {
+            "type" : "VennDiagram",
+            "content" : {
+                "Leonardo da Vinci" : ["known for scientific work","created the Mona Lisa","late 15th-early 16th century", "known for painting", "from Florence"],
+                "Michelangelo" : ["late 15th-early 16th century", "known for painting", "from Florence", "known for sculpting", "created David"]
+            }
+        }
+    },
+    {
+        "instruction" : "What is the color of the headphones present on the left side?",
+        "image" : "Picture13.png",
+        "target" : "White",
+        "source" : "Touchstone",
+        "ideal_grounding" : {
+            "type" : "Two Headphones",
+            "content" : {
+                "objects" : ["headphone", "headphone"],
+                "colors" : ["White", "Black"],
+                "bounding-box" : [[[80,15],[532,834]], [[644,15],[655,844]]]
+            },
+            "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width and the height of the bounding box."
+        }
+    },
+    {
+        "instruction" : "Calculate the length of the hypotenuse of the right-angled triangle.",
+        "image" : "Picture14.png",
+        "target" : "10",
+        "source" : "Touchstone",
+        "ideal_grounding" : {
+            "type" : "Right Angled Triangle",
+            "content" : {
+                "Base" : 6,
+                "Height" : 8,
+                "Hyptenuse" : "?"
+            }
+        }
+    },
+    {
+        "instruction" : "Find the value of the expression denoted by question mark (?).",
+        "image" : "Picture15.png",
+        "target" : "5",
+        "source" : "Touchstone",
+        "ideal_grounding" : {
+            "type" : "mathematical-expression",
+            "content" : {
+                "expression" : ["(3 + sqrt(4))"]
+            }
+        }
+    },
+    {
+        "instruction" : "Find the value of the expression denoted by question mark (?).",
+        "image" : "Picture16.png",
+        "target" : "30",
+        "source" : "Touchstone",
+        "ideal_grounding" : {
+            "type" : "mathematical-expression",
+            "content" : {
+                "expression" : ["6*(2 + 3)"]
+            }
+        }
+    },
+    {
+        "instruction" : "According to the given schedule, what are you going to do at 11 am on Friday?",
+        "image" : "Picture17.png",
+        "target" : "go to the airport to meet Sam",
+        "source" : "Touchstone",
+        "ideal_grounding" : {
+            "type" : "Schedule",
+            "content" : [
+                ["Monday", "10:30-11:00am", "visit Uncle Peter in General Hospital"],
+                ["Tuesday", "2:00-4:00pm", "swimming class"],
+                ["Wednesday", "12:00-6:00pm", "part-time job"],
+                ["Thursday", "10:30-11:30am, 12:00-5:00pm", "Appointment Mr. Green"],
+                ["Friday", "11:00am", "go to the airport to meet Sam"],
+                ["Saturday", "10:00-12:00am", "Meet Dave to study for test"],
+                ["Sunday", "5:00-7:00pm", "Birthday party for Kate"]
+            ]
+        }
+    },
+    {
+        "instruction" : "Are the two balls touching each other? Answer in Yes or No.",
+        "image" : "Picture18.png",
+        "target" : "No",
+        "source" : "Clevr",
+        "ideal_grounding" : {
+            "type" : "Ground",
+            "content" : {
+                "objects" : ["Ball", "Ball"],
+                "bounding-box" : [[[237,409],[527,489]], [[780,191],[414,372]]],
+                "colors" : ["Green", "Green"]
+            },
+            "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width and the height of the bounding box."
+        }
+    },
+    {
+        "instruction" : "Is there flag present? Answer in Yes or No.",
+        "image" : "Picture19.png",
+        "target" : "Yes",
+        "source" : "Google",
+        "ideal_grounding" : {
+            "type" : "Ground",
+            "content" : {
+                "objects" : ["Flag","Person", "Book"],
+                "bounding-box" : [[[355,296],[469,329]], [[358,0],[577,625]], [[474,170],[313,209]]]
+            },
+            "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width and the height of the bounding box."
+        }
+    },
+    {
+        "instruction" : "Is the leftmost person holding a flag? Answer in Yes or No.",
+        "image" : "Picture20.png",
+        "target" : "Yes",
+        "source" : "GQA",
+        "ideal_grounding" : {
+            "type" : "Patriotic",
+            "content" : {
+                "objects" : ["Person", "Flag" , "Person", "Flag"],
+                "bounding-box" : [[[138,126],[106,263]], [[0,45],[252,195]], [[248,126],[124,263]], [[256,0],[185,255]]]
+            },
+            "comment": "The dictionary also contains bounding box for each object. The bounding box is represented as [[x1,y1],[x2,y2]], where (x1,y1) is the top left corner of the bounding box and (x2,y2) denotes the width and the height of the bounding box."
+        }
+    },
+    {
+        "instruction" : "Find the value of blue cone.",
+        "image" : "Picture21.png",
+        "target" : "4",
+        "source" : "Google",
+        "ideal_grounding" : {
+            "type" : "mathematical-expression",
+            "content" : {
+                "objects" : ["blue_cone", "pink_cone"],
+                "expression1" : ["blue_cone + pink_cone + pink_cone = 24"],
+                "expression2" : ["pink_cone - blue_cone = 6"]
+            },
+            "comment" : "The above two equations can be break down to solve the following two linear equations: x + 2y = 24 and y - x = 6, where y denotes the value of pink_cone and x denotes the value of blue_cone."
+        }
+    },
+    {
+        "instruction" : "What is the area of the given right angled triangle. You can use the formula A = 1/2 * b * h to calculate the area of the triangle. Output the numerical value only.",
+        "image" : "Picture22.png",
+        "target" : "150",
+        "source" : "Google",
+        "ideal_grounding" : {
+            "type" : "Right Angled Triangle",
+            "content" : {
+                "Base" : 15,
+                "Height" : 20
+            }
+        }
+    },
+    {
+        "instruction" : "Output the sum of numbers present in the given matrix.",
+        "image" : "Picture23.png",
+        "target" : "68",
+        "source" : "Google",
+        "ideal_grounding" : {
+            "type" : "grid",
+            "content" : {
+                "matrix" : [[12,13],[21,22]]
+            }
+        }
+    },
+    {
+        "instruction" : "Count the number of ocurrances of the word 'is' in the given paragraph.",
+        "image" : "Picture24.png",
+        "target" : "0",
+        "source" : "Google",
+        "ideal_grounding" : {
+            "type" : "paragraph",
+            "content" : {
+                "text" : "Recently, I had the pleasure of seeing one of William Shakespeare's most beloved comedies, A Midsummer Night's Dream, performed beautifully at the Los Angeles Repertory Theatre in downtown Los Angeles. At first glance, this performance space looks more like an industrial warehouse than an art house, but walking in you are transformed to the magical land of Midsummer."
+            }
+        }
+    },
+    {
+        "instruction" : "Find the value of question mark (?) in the given expression.",
+        "image" : "Picture25.png",
+        "target" : "96",
+        "source" : "Google",
+        "ideal_grounding" : {
+            "type" : "mathematical-expression",
+            "content" : {
+                "expression1" : ["1 + 4 = 5"],
+                "expression2" : ["2 + 5 = 12"],
+                "expression3" : ["3 + 6 = 21"],
+                "expression4" : ["8 + 11"]
+            },
+            "comment" : "The above 4 equations can be bread down to solve the function f such that f(1,4) = 5; f(2,5) = 12; f(3,6) = 21. The value of f(8,11) is the value of question mark (?) in the given expression."
+        }
+    }
+]

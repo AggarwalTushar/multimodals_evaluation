@@ -1,0 +1,152 @@
+[
+    {
+        "instruction": "Which person in the given data has the highest BMI value?",
+        "output": "```Python\u0004 ` Ronald\n` M\n` Mary\n` F\n` F",
+        "target": "Ronald",
+        "inference_time": 1.6367979049682617
+    },
+    {
+        "instruction": "What is the value of Voltage(V) in the given circuit. You can use the formula V = IR to calculate the value of Voltage(V). Also note that the unit of Voltage is Volt(V), unit of current is Ampere(A), and unit of resistance is Ohm(\u03a9).",
+        "output": "```Python\u0004 70 A\n70 A",
+        "target": "350",
+        "inference_time": 1.294729232788086
+    },
+    {
+        "instruction": "The value of star is 8, the value of triangle is 2, the value of circle is 6 and the value of rectangle is 4. We have an expression over star, triangle, circle and rectangle which uses mathematical operations of addition (+), subtraction (-), equality (=) and question mark (?). Find the value of the expression denoted by question mark (?).",
+        "output": "```Python\u0004 add(5, 3, 7, 6)\n + 5 + 3 + 7 + 6\n + 18 + 6",
+        "target": "4",
+        "inference_time": 1.9222352504730225
+    },
+    {
+        "instruction": "Find the shortest distance between vertices 0 and 3. The green color nodes represent the vertices, the lines represent edges and the numbers written over lines represent distance between the corresponding vertices.",
+        "output": "import plzintx from \"plzintx\" import pylab from \"pylab\" import pylab.graphplot from \"pylab.graphplot\" import pylab.plot from \"pylab.plot\" import pylab.plot.graph from \"pylab.plot.graph\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from pylab.graphplot import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"pylab.graphplot\" import pylab.graphplot from \"",
+        "target": "7",
+        "inference_time": 32.16645908355713
+    },
+    {
+        "instruction": "You are given a\u00a02 x 2\u00a0integer matrix\u00a0board\u00a0where the cells are labeled from 1 to 4 in a\u00a0Boustrophedon style\u00a0starting from the bottom left of the board (i.e.\u00a0board[1][0]) and alternating direction each row. You start on square numbered\u00a01\u00a0of the board. In each move, starting from square\u00a0curr, do the following: \n1. Choose a destination square\u00a0next\u00a0with a label in the range\u00a0[curr + 1, min(curr + 6, 4)] \n2. If next has a snake or ladder, you must move to the destination of that snake or ladder. Otherwise, you move to\u00a0next.\n3. The game ends when you reach 4.\nOutput the minimum number of moves required to reach the square 4. If it is not possible to reach the square, return\u00a0-1",
+        "output": "```Python\u0004 2 x 2 Array - 1",
+        "target": "1",
+        "inference_time": 3.3575005531311035
+    },
+    {
+        "instruction": "Count the total number of persons.",
+        "output": "```Python\u0004 3\n 3",
+        "target": "3",
+        "inference_time": 0.9814279079437256
+    },
+    {
+        "instruction": "Is the following statement true or false? The largest planet is made mainly of ice.",
+        "output": "```Python\u0004 Saturn\nEarth\nJupiter\nVenus\nMars\nJupiter\nMars",
+        "target": "False",
+        "inference_time": 1.1965045928955078
+    },
+    {
+        "instruction": "Will these magnets attract or repel each other? Answer True for attract and False for repel.",
+        "output": "```Python\u0004 True for \"attract\", True for \"repel\"\n\n# Write the response:\nTrue for \"attract\", True for \"repel\"",
+        "target": "True",
+        "inference_time": 1.593003273010254
+    },
+    {
+        "instruction": "Which month is the hottest on average in Rome?",
+        "output": "```Python\u0004 2011-06-01`",
+        "target": "July and August",
+        "inference_time": 1.0908257961273193
+    },
+    {
+        "instruction": "Which month is the wettest on average in Christchurch?",
+        "output": "```Python\u0004 2010-06-01`",
+        "target": "May",
+        "inference_time": 0.9388494491577148
+    },
+    {
+        "instruction": "Which solution has a higher concentration of green particles?",
+        "output": "```Python\u0004 50 ml\nSolvent volume: 50 ml",
+        "target": "Solution B",
+        "inference_time": 0.9969360828399658
+    },
+    {
+        "instruction": "Based on the Venn diagram, what things do Leonardo da Vinci and Michelangelo have in common?",
+        "output": "```Python\u0004 Leonardo da Vinci` and `Michelangelo` both had an early 16th century work created during the Mona Lisa.`\n`Late 15th-early 16th century`\n`Known for painting`\n`from Florence`\n`from Italy`\n`from Florentine royalty`\n`from Mona Lisa`",
+        "target": "[late 15th-early 16th century, known for painting, from Florence]",
+        "inference_time": 2.7057857513427734
+    },
+    {
+        "instruction": "What is the color of the headphones present on the left side?",
+        "output": "```Python\u0004 `",
+        "target": "White",
+        "inference_time": 2.110234022140503
+    },
+    {
+        "instruction": "Calculate the length of the hypotenuse of the right-angled triangle.",
+        "output": "import pylab from pylab import pylab.py\n# Write the \"H\" and \"B\" values.\n# Write the \"G\" and \"A\" values.\n# Write the \"D\" and \"C\" values.\n# Write the \"E\" and \"F\" values.\n# Write the final answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# Write the answer.\n# ",
+        "target": "10",
+        "inference_time": 31.5954647064209
+    },
+    {
+        "instruction": "Find the value of the expression denoted by question mark (?).",
+        "output": "3+1/4=`?`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`3+1/4`\n`?`=`4+1/4`\n`?`=`",
+        "target": "5",
+        "inference_time": 31.660491943359375
+    },
+    {
+        "instruction": "Find the value of the expression denoted by question mark (?).",
+        "output": "6x(2+3)=3`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n`?`\n````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````",
+        "target": "30",
+        "inference_time": 31.534499645233154
+    },
+    {
+        "instruction": "According to the given schedule, what are you going to do at 11 am on Friday?",
+        "output": "11:00 am`\n`Go at the airport to meet Sam`\n`Meet Dave to study for test`\n`Birthday party for Kate`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class`\n`Swimming class",
+        "target": "go to the airport to meet Sam",
+        "inference_time": 31.678919315338135
+    },
+    {
+        "instruction": "Are the two balls touching each other? Answer in Yes or No.",
+        "output": "```Python\u0004 Creative Market``",
+        "target": "No",
+        "inference_time": 3.043905019760132
+    },
+    {
+        "instruction": "Is there flag present? Answer in Yes or No.",
+        "output": "```Python\u0004\n\nYes",
+        "target": "Yes",
+        "inference_time": 1.5347316265106201
+    },
+    {
+        "instruction": "Is the leftmost person holding a flag? Answer in Yes or No.",
+        "output": "Python\n Python is a programming language.\n\n#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#`#",
+        "target": "Yes",
+        "inference_time": 31.959128856658936
+    },
+    {
+        "instruction": "Find the value of blue cone.",
+        "output": "import 'pygame' as pygame\n import 'pygame.graphics' as pygame.graphics\n import 'pygame.math' as pygame.math\n import 'pygame.numeric' as pygame.numeric\n import 'pygame.game' as pygame.game\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.graphics' as pygame.graphics\n import 'pygame.numeric' as pygame.numeric\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.graphics' as pygame.graphics\n import 'pygame.numeric' as pygame.numeric\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev' as pygame.gamedev\n import 'pygame.gamedev'",
+        "target": "4",
+        "inference_time": 33.26593518257141
+    },
+    {
+        "instruction": "What is the area of the given right angled triangle. You can use the formula A = 1/2 * b * h to calculate the area of the triangle. Output the numerical value only.",
+        "output": "```Python\u0004 15.0 cm",
+        "target": "150",
+        "inference_time": 1.0715441703796387
+    },
+    {
+        "instruction": "Output the sum of numbers present in the given matrix.",
+        "output": "3 0 2 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0",
+        "target": "68",
+        "inference_time": 32.13115739822388
+    },
+    {
+        "instruction": "Count the number of ocurrances of the word 'is' in the given paragraph.",
+        "output": "```Python\u0004 `is` occurs 3 times.`",
+        "target": "0",
+        "inference_time": 3.774303436279297
+    },
+    {
+        "instruction": "Find the value of question mark (?) in the given expression.",
+        "output": "```Python\u0004 1+4=5``\n 8+6=11````",
+        "target": "96",
+        "inference_time": 1.2833447456359863
+    }
+]

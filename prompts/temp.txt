@@ -1,0 +1,40 @@
+Extract all the information present inside the given image. Use python arrays or dictionaries to store the information if required. You can also use variables to denote the figures inside the image if required.
+
+
+
+For this image, the user has given the following instruction:
+{{instruction}}
+Extract all the relevant information present inside the given image. Use python variables or dictionaries to store the information if required.
+
+## Rephrase the instruction and write it as a coding problem to solve the instruction using the extracted information as input
+----------------------------------------------------------------------------
+Below is an instruction that describes a task. Write a response that appropriately completes the request.
+Write the entire code and no other text.
+
+### Note:
+The instruction also has an image attached to it, but you can ignore the image. The relevant information present inside the image is also given below for your reference.
+
+### Instruction:
+{{prompt}}
+### Information:
+{{info}}
+
+### Response:```Python
+------------------------------------------------------------------------------------
+The user has given the following instructions based on this image:
+{{instruction}}
+Extract all the relevant information required to solve the instruction from the given image. Use python variabes or dictionaries to store the information if required. Additionally, rephrase the instruction and write it as a coding problem to solve the instruction using the extracted information as input.
+--------------------------------
+Following is a task based on some image. You need to output all the questions that can be answered using code and can lead to the solution of the following task.
+
+### Instruction: 
+{{instruction}}
+
+### Response:
+----------------------------------------
+Following is a task based on some image. You need to output all the questions that can be asked from the image which when answered can lead to the solution of the task.
+
+### Instruction: 
+{{instruction}}
+
+### Response:

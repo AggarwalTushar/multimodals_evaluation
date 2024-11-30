@@ -1,0 +1,152 @@
+[
+    {
+        "instruction": "Which person in the given data has the highest BMI value?",
+        "output": "The person with the highest BMI value is Phillip.",
+        "target": "Ronald",
+        "inference_time": 8.870560646057129
+    },
+    {
+        "instruction": "What is the value of Voltage(V) in the given circuit. You can use the formula V = IR to calculate the value of Voltage(V). Also note that the unit of Voltage is Volt(V), unit of current is Ampere(A), and unit of resistance is Ohm(\u03a9).",
+        "output": "The value of Voltage (V) in the given circuit is 70 A.",
+        "target": "350",
+        "inference_time": 5.955596685409546
+    },
+    {
+        "instruction": "The value of star is 8, the value of triangle is 2, the value of circle is 6 and the value of rectangle is 4. We have an expression over star, triangle, circle and rectangle which uses mathematical operations of addition (+), subtraction (-), equality (=) and question mark (?). Find the value of the expression denoted by question mark (?).",
+        "output": "The value of the expression is 12.",
+        "target": "4",
+        "inference_time": 5.703954219818115
+    },
+    {
+        "instruction": "Find the shortest distance between vertices 0 and 3. The green color nodes represent the vertices, the lines represent edges and the numbers written over lines represent distance between the corresponding vertices.",
+        "output": "The shortest distance between vertices 0 and 3 is 3.",
+        "target": "7",
+        "inference_time": 5.000298500061035
+    },
+    {
+        "instruction": "You are given a\u00a02 x 2\u00a0integer matrix\u00a0board\u00a0where the cells are labeled from 1 to 4 in a\u00a0Boustrophedon style\u00a0starting from the bottom left of the board (i.e.\u00a0board[1][0]) and alternating direction each row. You start on square numbered\u00a01\u00a0of the board. In each move, starting from square\u00a0curr, do the following: \n1. Choose a destination square\u00a0next\u00a0with a label in the range\u00a0[curr + 1, min(curr + 6, 4)] \n2. If next has a snake or ladder, you must move to the destination of that snake or ladder. Otherwise, you move to\u00a0next.\n3. The game ends when you reach 4.\nOutput the minimum number of moves required to reach the square 4. If it is not possible to reach the square, return\u00a0-1",
+        "output": "The image shows a 2x2 integer matrix board with the cells labeled from 1 to 4 in a Boustrophedon style starting from the bottom left of the board. The task is to move from the square labeled 1 to the square labeled 4, following certain rules. The rules are as follows:\n\n1. Choose a destination square next with a label in the range [curr + 1, min(curr + 6, 4)].\n2. If the next square has a snake or ladder, move to the destination of that snake or ladder. Otherwise, move to the next square.\n3. The game ends when you reach 4.\n\nThe minimum number of moves required to reach the square 4 is 3. To reach the square 4, we start from the square labeled 1 and move to the square labeled 2. From there, we move to the square labeled 3, and finally, we move to the square labeled 4. The path from square 1 to square 4 is [1, 2, 3, 4].",
+        "target": "1",
+        "inference_time": 11.061967372894287
+    },
+    {
+        "instruction": "Count the total number of persons.",
+        "output": "There are three persons in the image.",
+        "target": "3",
+        "inference_time": 4.823359251022339
+    },
+    {
+        "instruction": "Is the following statement true or false? The largest planet is made mainly of ice.",
+        "output": "True",
+        "target": "False",
+        "inference_time": 4.983509302139282
+    },
+    {
+        "instruction": "Will these magnets attract or repel each other? Answer True for attract and False for repel.",
+        "output": "True",
+        "target": "True",
+        "inference_time": 4.703608274459839
+    },
+    {
+        "instruction": "Which month is the hottest on average in Rome?",
+        "output": "The hottest month on average in Rome is July, with an average temperature of 28.5 degrees Celsius.",
+        "target": "July and August",
+        "inference_time": 6.5079262256622314
+    },
+    {
+        "instruction": "Which month is the wettest on average in Christchurch?",
+        "output": "The wettest month on average in Christchurch is December.",
+        "target": "May",
+        "inference_time": 5.391433238983154
+    },
+    {
+        "instruction": "Which solution has a higher concentration of green particles?",
+        "output": "Solution B has a higher concentration of green particles.",
+        "target": "Solution B",
+        "inference_time": 5.787856817245483
+    },
+    {
+        "instruction": "Based on the Venn diagram, what things do Leonardo da Vinci and Michelangelo have in common?",
+        "output": "Both Leonardo da Vinci and Michelangelo are known for their contributions to the field of art and science. They are both considered to be among the most influential artists of their time, and their works have had a lasting impact on the world of art and culture. Additionally, both artists were born in Italy, which may suggest a shared cultural background or influence.",
+        "target": "[late 15th-early 16th century, known for painting, from Florence]",
+        "inference_time": 7.025498867034912
+    },
+    {
+        "instruction": "What is the color of the headphones present on the left side?",
+        "output": "The color of the headphones on the left side is white.",
+        "target": "White",
+        "inference_time": 5.255638837814331
+    },
+    {
+        "instruction": "Calculate the length of the hypotenuse of the right-angled triangle.",
+        "output": "The length of the hypotenuse of the right-angled triangle is 8.",
+        "target": "10",
+        "inference_time": 5.970117092132568
+    },
+    {
+        "instruction": "Find the value of the expression denoted by question mark (?).",
+        "output": "The value of the expression denoted by the question mark is 3+4.",
+        "target": "5",
+        "inference_time": 5.103903293609619
+    },
+    {
+        "instruction": "Find the value of the expression denoted by question mark (?).",
+        "output": "The value of the expression denoted by the question mark is 6 + 2 + 3 = 11.",
+        "target": "30",
+        "inference_time": 5.57094407081604
+    },
+    {
+        "instruction": "According to the given schedule, what are you going to do at 11 am on Friday?",
+        "output": "According to the given schedule, at 11 am on Friday, you are going to meet Dave to study for a test.",
+        "target": "go to the airport to meet Sam",
+        "inference_time": 6.013946533203125
+    },
+    {
+        "instruction": "Are the two balls touching each other? Answer in Yes or No.",
+        "output": "No",
+        "target": "No",
+        "inference_time": 5.532299995422363
+    },
+    {
+        "instruction": "Is there flag present? Answer in Yes or No.",
+        "output": "Yes",
+        "target": "Yes",
+        "inference_time": 4.729399919509888
+    },
+    {
+        "instruction": "Is the leftmost person holding a flag? Answer in Yes or No.",
+        "output": "Yes",
+        "target": "Yes",
+        "inference_time": 4.69282865524292
+    },
+    {
+        "instruction": "Find the value of blue cone.",
+        "output": "The value of the blue cone is 6.",
+        "target": "4",
+        "inference_time": 5.046403169631958
+    },
+    {
+        "instruction": "What is the area of the given right angled triangle. You can use the formula A = 1/2 * b * h to calculate the area of the triangle. Output the numerical value only.",
+        "output": "The area of the right angled triangle is 15.25 cm^2.",
+        "target": "150",
+        "inference_time": 5.552815914154053
+    },
+    {
+        "instruction": "Output the sum of numbers present in the given matrix.",
+        "output": "The sum of numbers present in the given matrix is 10.",
+        "target": "68",
+        "inference_time": 5.882991313934326
+    },
+    {
+        "instruction": "Count the number of ocurrances of the word 'is' in the given paragraph.",
+        "output": "There are 3 occurrences of the word 'is' in the given paragraph.",
+        "target": "1",
+        "inference_time": 6.073139667510986
+    },
+    {
+        "instruction": "Find the value of question mark (?) in the given expression.",
+        "output": "The value of the question mark (?) in the given expression is 12.",
+        "target": "96",
+        "inference_time": 5.0750651359558105
+    }
+]

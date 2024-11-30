@@ -1,0 +1,6 @@
+Below is an instruction that describes a task based on the given image. Write a response that appropriately completes the request.
+
+### Instruction: 
+{{prompt}}
+
+### Response: 

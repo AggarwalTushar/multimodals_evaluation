@@ -1,0 +1,152 @@
+[
+    {
+        "instruction": "Which person in the given data has the highest BMI value?",
+        "output": "The person with the highest BMI value is Phillip.",
+        "target": "Ronald",
+        "inference_time": 7.177151203155518
+    },
+    {
+        "instruction": "What is the value of Voltage(V) in the given circuit. You can use the formula V = IR to calculate the value of Voltage(V). Also note that the unit of Voltage is Volt(V), unit of current is Ampere(A), and unit of resistance is Ohm(\u03a9).",
+        "output": "To find the value of Voltage (V) in the given circuit, we can use the formula V = IR. In the image, there is a circle with a number inside it, which is the value of resistance (R). We can use this value to calculate the Voltage (V) in the circuit.\n\nFirst, we need to find the value of current (I) in the circuit. We can do this by looking at the image and identifying the current symbol (I) and the value of current (I) inside the circle.\n\nNext, we can use the formula V = IR to calculate the value of Voltage (V). We can plug in the values of resistance (R) and current (I) into the formula to get:\n\nV = I \\* R\n\nFinally, we can solve for the value of Voltage (V) by dividing both sides of the equation by the value of resistance (R):\n\nV = I / R\n\nSince we have the value of current (I) and resistance (R) in the image, we can calculate the value of Voltage (V) using the formula V = IR.",
+        "target": "350",
+        "inference_time": 11.153244018554688
+    },
+    {
+        "instruction": "The value of star is 8, the value of triangle is 2, the value of circle is 6 and the value of rectangle is 4. We have an expression over star, triangle, circle and rectangle which uses mathematical operations of addition (+), subtraction (-), equality (=) and question mark (?). Find the value of the expression denoted by question mark (?).",
+        "output": "The value of the expression is 12.",
+        "target": "4",
+        "inference_time": 5.114759206771851
+    },
+    {
+        "instruction": "Find the shortest distance between vertices 0 and 3. The green color nodes represent the vertices, the lines represent edges and the numbers written over lines represent distance between the corresponding vertices.",
+        "output": "The shortest distance between vertices 0 and 3 is 3.",
+        "target": "7",
+        "inference_time": 5.986660480499268
+    },
+    {
+        "instruction": "You are given a\u00a02 x 2\u00a0integer matrix\u00a0board\u00a0where the cells are labeled from 1 to 4 in a\u00a0Boustrophedon style\u00a0starting from the bottom left of the board (i.e.\u00a0board[1][0]) and alternating direction each row. You start on square numbered\u00a01\u00a0of the board. In each move, starting from square\u00a0curr, do the following: \n1. Choose a destination square\u00a0next\u00a0with a label in the range\u00a0[curr + 1, min(curr + 6, 4)] \n2. If next has a snake or ladder, you must move to the destination of that snake or ladder. Otherwise, you move to\u00a0next.\n3. The game ends when you reach 4.\nOutput the minimum number of moves required to reach the square 4. If it is not possible to reach the square, return\u00a0-1",
+        "output": "To solve this problem, we can use a recursive approach. We can define a function that takes the current square and the destination square as input, and returns the minimum number of moves required to reach the destination square. If the destination square is not reachable, the function returns -1.\n\nWe can start by defining the base case, which is when the current square is 1. In this case, the minimum number of moves required to reach the destination square 4 is 3, since we need to move to 2, 3, and then 4.\n\nFor the recursive case, we can assume that the current square is not 1, and we need to find the minimum number of moves required to reach the destination square from the current square. We can consider two cases:\n\n1. If the destination square is reachable from the current square, we can use the recursive approach to find the minimum number of moves required to reach the destination square.\n2. If the destination square is not reachable from the current square, we can return -1.\n\nWe can then define the function as follows:\n```python\ndef min_moves(curr, dest):\n    if curr == 1:\n        return 3\n    elif dest in [(i, j) for i in range(1, 4) for j in range(i + 1, 4)]:\n        return min_moves(i, dest) + 1\n    else:\n        return -1\n```\nWe can then test the function with the given input:\n```python\nprint(min_moves(1, 4))  # Output: 3\nprint(min_moves(2, 4))  # Output: -1\n```\nThe output confirms that the minimum number of moves required to reach the square 4 is 3, and it is not possible to reach the square 2.",
+        "target": "1",
+        "inference_time": 15.794812679290771
+    },
+    {
+        "instruction": "Count the total number of persons.",
+        "output": "There are three persons in the image.",
+        "target": "3",
+        "inference_time": 4.960428476333618
+    },
+    {
+        "instruction": "Is the following statement true or false? The largest planet is made mainly of ice.",
+        "output": "True",
+        "target": "False",
+        "inference_time": 5.473740577697754
+    },
+    {
+        "instruction": "Will these magnets attract or repel each other? Answer True for attract and False for repel.",
+        "output": "True",
+        "target": "True",
+        "inference_time": 4.88170313835144
+    },
+    {
+        "instruction": "Which month is the hottest on average in Rome?",
+        "output": "The hottest month on average in Rome is July, with an average temperature of 28.5 degrees Celsius.",
+        "target": "July and August",
+        "inference_time": 5.683506011962891
+    },
+    {
+        "instruction": "Which month is the wettest on average in Christchurch?",
+        "output": "The wettest month on average in Christchurch is December.",
+        "target": "May",
+        "inference_time": 5.103250503540039
+    },
+    {
+        "instruction": "Which solution has a higher concentration of green particles?",
+        "output": "Solution A has a higher concentration of green particles.",
+        "target": "Solution B",
+        "inference_time": 6.198971509933472
+    },
+    {
+        "instruction": "Based on the Venn diagram, what things do Leonardo da Vinci and Michelangelo have in common?",
+        "output": "Both Leonardo da Vinci and Michelangelo are known for their contributions to the field of art and science. They are both considered to be among the most influential artists of their time, with their works often considered to be among the greatest achievements in the history of art. Both artists were also known for their innovative techniques and methods, which helped to shape the way art was created and appreciated. Additionally, both artists were born in Italy, which may have contributed to their shared cultural background and artistic influences.",
+        "target": "[late 15th-early 16th century, known for painting, from Florence]",
+        "inference_time": 8.069934606552124
+    },
+    {
+        "instruction": "What is the color of the headphones present on the left side?",
+        "output": "White",
+        "target": "White",
+        "inference_time": 4.888873100280762
+    },
+    {
+        "instruction": "Calculate the length of the hypotenuse of the right-angled triangle.",
+        "output": "The length of the hypotenuse of the right-angled triangle is 8.",
+        "target": "10",
+        "inference_time": 5.452414035797119
+    },
+    {
+        "instruction": "Find the value of the expression denoted by question mark (?).",
+        "output": "4 + 3 = 7",
+        "target": "5",
+        "inference_time": 5.28963828086853
+    },
+    {
+        "instruction": "Find the value of the expression denoted by question mark (?).",
+        "output": "The value of the expression denoted by the question mark is 6 + 2 + 3 = 11.",
+        "target": "30",
+        "inference_time": 6.347012281417847
+    },
+    {
+        "instruction": "According to the given schedule, what are you going to do at 11 am on Friday?",
+        "output": "According to the given schedule, at 11 am on Friday, I am going to meet Dave to study for a test.",
+        "target": "go to the airport to meet Sam",
+        "inference_time": 5.995858192443848
+    },
+    {
+        "instruction": "Are the two balls touching each other? Answer in Yes or No.",
+        "output": "No",
+        "target": "No",
+        "inference_time": 5.419553995132446
+    },
+    {
+        "instruction": "Is there flag present? Answer in Yes or No.",
+        "output": "Yes",
+        "target": "Yes",
+        "inference_time": 5.518153190612793
+    },
+    {
+        "instruction": "Is the leftmost person holding a flag? Answer in Yes or No.",
+        "output": "Yes",
+        "target": "Yes",
+        "inference_time": 5.205162763595581
+    },
+    {
+        "instruction": "Find the value of blue cone.",
+        "output": "The value of the blue cone is 24.",
+        "target": "4",
+        "inference_time": 6.091791152954102
+    },
+    {
+        "instruction": "What is the area of the given right angled triangle. You can use the formula A = 1/2 * b * h to calculate the area of the triangle. Output the numerical value only.",
+        "output": "A = 1/2 * 20 * 15 = 1500\n```",
+        "target": "150",
+        "inference_time": 6.397517204284668
+    },
+    {
+        "instruction": "Output the sum of numbers present in the given matrix.",
+        "output": "I'm sorry, but I am not able to perform the task as there is no matrix provided in the instruction. Please provide the matrix so that I can assist you in finding the sum of the numbers present in it.",
+        "target": "68",
+        "inference_time": 6.191540479660034
+    },
+    {
+        "instruction": "Count the number of ocurrances of the word 'is' in the given paragraph.",
+        "output": "The word \"is\" appears five times in the given paragraph.",
+        "target": "1",
+        "inference_time": 5.58604884147644
+    },
+    {
+        "instruction": "Find the value of question mark (?) in the given expression.",
+        "output": "The value of the question mark (?) in the given expression is 12.",
+        "target": "96",
+        "inference_time": 5.961197376251221
+    }
+]

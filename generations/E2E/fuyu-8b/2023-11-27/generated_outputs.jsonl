@@ -1,0 +1,152 @@
+[
+    {
+        "instruction": "Which person in the given data has the highest BMI value?",
+        "output": " \u0004 Philip M\n\nPhilip M",
+        "target": "Ronald",
+        "inference_time": 1.2630999088287354
+    },
+    {
+        "instruction": "What is the value of Voltage(V) in the given circuit. You can use the formula V = IR to calculate the value of Voltage(V). Also note that the unit of Voltage is Volt(V), unit of current is Ampere(A), and unit of resistance is Ohm(\u03a9).",
+        "output": " \u0004 70\n\n70",
+        "target": "350",
+        "inference_time": 1.2742772102355957
+    },
+    {
+        "instruction": "The value of star is 8, the value of triangle is 2, the value of circle is 6 and the value of rectangle is 4. We have an expression over star, triangle, circle and rectangle which uses mathematical operations of addition (+), subtraction (-), equality (=) and question mark (?). Find the value of the expression denoted by question mark (?).",
+        "output": " \u0004 8 + 2 + 6 + 4 = 18\n\n 18 - 8 + 2 + 6 + 4 = 14\n\n 14 - 8 + 2 + 6 + 4 = 10\n\n 10 - 8 + 2 + 6 + 4 = 6\n\n 6 - 8 + 2 + 6 + 4 = 2\n\n 2 = 6\n\n 6 = 2\n\n The final answer: 2",
+        "target": "4",
+        "inference_time": 4.564224004745483
+    },
+    {
+        "instruction": "Find the shortest distance between vertices 0 and 3. The green color nodes represent the vertices, the lines represent edges and the numbers written over lines represent distance between the corresponding vertices.",
+        "output": " \u0004 1\n\nThe shortest distance between 0 and 3 is 1.",
+        "target": "7",
+        "inference_time": 1.3212552070617676
+    },
+    {
+        "instruction": "You are given a\u00a02 x 2\u00a0integer matrix\u00a0board\u00a0where the cells are labeled from 1 to 4 in a\u00a0Boustrophedon style\u00a0starting from the bottom left of the board (i.e.\u00a0board[1][0]) and alternating direction each row. You start on square numbered\u00a01\u00a0of the board. In each move, starting from square\u00a0curr, do the following: \n1. Choose a destination square\u00a0next\u00a0with a label in the range\u00a0[curr + 1, min(curr + 6, 4)] \n2. If next has a snake or ladder, you must move to the destination of that snake or ladder. Otherwise, you move to\u00a0next.\n3. The game ends when you reach 4.\nOutput the minimum number of moves required to reach the square 4. If it is not possible to reach the square, return\u00a0-1",
+        "output": " \u0004\n1. If next has a snake or ladder, you must move to the destination of that snake or ladder. Otherwise, you move to next.\n2. The game ends when you reach 4.\n3. If next has a snake or ladder, you must move to the destination of that snake or ladder. Otherwise, you move to next.\n4. The game ends when you reach 4.\n\nThe smallest number of moves required to reach the square 4 is 2.\n\n",
+        "target": "1",
+        "inference_time": 5.86188268661499
+    },
+    {
+        "instruction": "Count the total number of persons.",
+        "output": " \u0004 3",
+        "target": "3",
+        "inference_time": 0.918349027633667
+    },
+    {
+        "instruction": "Is the following statement true or false? The largest planet is made mainly of ice.",
+        "output": " \u0004\nFalse",
+        "target": "False",
+        "inference_time": 0.7986528873443604
+    },
+    {
+        "instruction": "Will these magnets attract or repel each other? Answer True for attract and False for repel.",
+        "output": " \u0004\nYes, the magnets will naturally repel each other.\n\n",
+        "target": "True",
+        "inference_time": 0.8856067657470703
+    },
+    {
+        "instruction": "Which month is the hottest on average in Rome?",
+        "output": " \u0004 July",
+        "target": "July and August",
+        "inference_time": 0.7118823528289795
+    },
+    {
+        "instruction": "Which month is the wettest on average in Christchurch?",
+        "output": " \u0004 July",
+        "target": "May",
+        "inference_time": 0.7368252277374268
+    },
+    {
+        "instruction": "Which solution has a higher concentration of green particles?",
+        "output": " \u0004\nGreen particles",
+        "target": "Solution B",
+        "inference_time": 0.7755684852600098
+    },
+    {
+        "instruction": "Based on the Venn diagram, what things do Leonardo da Vinci and Michelangelo have in common?",
+        "output": "Leonardo da Vinci and Michelangelo both invented and painted.\n\n# Michelangelo: \n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n# Michelangelo:\n# Leonardo da Vinci:\n#",
+        "target": "[late 15th-early 16th century, known for painting, from Florence]",
+        "inference_time": 31.799102067947388
+    },
+    {
+        "instruction": "What is the color of the headphones present on the left side?",
+        "output": " \u0004black",
+        "target": "White",
+        "inference_time": 2.1177546977996826
+    },
+    {
+        "instruction": "Calculate the length of the hypotenuse of the right-angled triangle.",
+        "output": " \u0004 2\n\nThe length of the hypotenuse of the right-angled triangle is 2.\n\n",
+        "target": "10",
+        "inference_time": 1.1326320171356201
+    },
+    {
+        "instruction": "Find the value of the expression denoted by question mark (?).",
+        "output": " \u0004 3 + 4 = 7\n\n3 + 4 = 7",
+        "target": "5",
+        "inference_time": 1.2037434577941895
+    },
+    {
+        "instruction": "Find the value of the expression denoted by question mark (?).",
+        "output": " \u0004 6\n\n6\n\n",
+        "target": "30",
+        "inference_time": 0.8352756500244141
+    },
+    {
+        "instruction": "According to the given schedule, what are you going to do at 11 am on Friday?",
+        "output": " \u0004\nI'm going to meet Dave to study for test.\n\n",
+        "target": "go to the airport to meet Sam",
+        "inference_time": 1.0240671634674072
+    },
+    {
+        "instruction": "Are the two balls touching each other? Answer in Yes or No.",
+        "output": " \u0004No",
+        "target": "No",
+        "inference_time": 2.9865405559539795
+    },
+    {
+        "instruction": "Is there flag present? Answer in Yes or No.",
+        "output": " \u0004 Yes, there is an American flag present.\n\n",
+        "target": "Yes",
+        "inference_time": 1.7285897731781006
+    },
+    {
+        "instruction": "Is the leftmost person holding a flag? Answer in Yes or No.",
+        "output": " \u0004 Yes.",
+        "target": "Yes",
+        "inference_time": 0.8596141338348389
+    },
+    {
+        "instruction": "Find the value of blue cone.",
+        "output": " \u0004 6",
+        "target": "4",
+        "inference_time": 1.1797561645507812
+    },
+    {
+        "instruction": "What is the area of the given right angled triangle. You can use the formula A = 1/2 * b * h to calculate the area of the triangle. Output the numerical value only.",
+        "output": " \u0004 15 cm\n",
+        "target": "150",
+        "inference_time": 1.1075224876403809
+    },
+    {
+        "instruction": "Output the sum of numbers present in the given matrix.",
+        "output": "\n\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 ",
+        "target": "68",
+        "inference_time": 31.85132336616516
+    },
+    {
+        "instruction": "Count the number of ocurrances of the word 'is' in the given paragraph.",
+        "output": " \u0004 2",
+        "target": "0",
+        "inference_time": 3.5416970252990723
+    },
+    {
+        "instruction": "Find the value of question mark (?) in the given expression.",
+        "output": " \u0004 8\n\n8\n\n",
+        "target": "96",
+        "inference_time": 0.9471244812011719
+    }
+]

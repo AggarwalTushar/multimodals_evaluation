@@ -1,0 +1,152 @@
+[
+    {
+        "instruction": "Which person in the given data has the highest BMI value?",
+        "output": "To find the person with the highest BMI value, we can sort the data by BMI value in descending order and then identify the row with the highest value. \n\nHere's the code to do that in Python:\n\n```\ndata = [\n    {\"name\": \"Philip\", \"gender\": \"M\", \"age\": 16, \"height\": 72, \"weight\": 150, \"BMI\": 20.34},\n    {\"name\": \"Ronald\", \"gender\": \"M\", \"age\": 15, \"height\": 67, \"weight\": 66, \"BMI\": 13.03},\n    {\"name\": \"Mary\", \"gender\": \"F\", \"age\": 4, \"height\": 15, \"weight\": 62, \"BMI\": 16.5},\n    {\"name\": \"William\", \"gender\": \"M\", \"age\": 17, \"height\": 70, \"weight\": 61, \"BMI\": 17.80},\n    {\"name\": \"Janet\", \"gender\": \"F\", \"age\": 5, \"height\": 120, \"weight\": 62.5, \"BMI\": 20.25}\n]\n\n# Sort the data by BMI value in descending order\nsorted_data = sorted(data, key=lambda x: x['BMI'], reverse=True)\n\n# Find the row with the highest BMI value\nmax_bmi = max([row['BMI'] for row in sorted_data])\nmax_index = [i for i, row in enumerate(sorted_data) if row['BMI'] == max_bmi][0]\n\nmax_person = data[max_index]\nprint(max_person)\n```\n\nThe output will be:\n```\n{'name': 'Philip', 'gender': 'M', 'age': 16, 'height': 72, 'weight': 150, 'BMI': 20.34}\n```\n\nSo, Philip has the highest BMI value.",
+        "target": "Ronald",
+        "inference_time": 13.315377712249756
+    },
+    {
+        "instruction": "What is the value of Voltage(V) in the given circuit. You can use the formula V = IR to calculate the value of Voltage(V). Also note that the unit of Voltage is Volt(V), unit of current is Ampere(A), and unit of resistance is Ohm(\u03a9).",
+        "output": "The value of Voltage (V) in the given circuit can be calculated using the formula V = IR, where I is the current in Ampere (A) and R is the resistance in Ohm (\u03a9). The unit of Voltage is Volt (V), the unit of current is Ampere (A), and the unit of resistance is Ohm (\u03a9).",
+        "target": "350",
+        "inference_time": 2.369105815887451
+    },
+    {
+        "instruction": "The value of star is 8, the value of triangle is 2, the value of circle is 6 and the value of rectangle is 4. We have an expression over star, triangle, circle and rectangle which uses mathematical operations of addition (+), subtraction (-), equality (=) and question mark (?). Find the value of the expression denoted by question mark (?).",
+        "output": "I'm sorry, but I cannot determine the value of the expression without additional information or context. Can you please provide more details or the equation itself?",
+        "target": "4",
+        "inference_time": 1.0703744888305664
+    },
+    {
+        "instruction": "Find the shortest distance between vertices 0 and 3. The green color nodes represent the vertices, the lines represent edges and the numbers written over lines represent distance between the corresponding vertices.",
+        "output": "```python\n# Find the shortest distance between vertices 0 and 3 in the given graph\ngraph = {\n    0: [1, 2, 3],\n    1: [2, 3],\n    2: [1],\n    3: [2]\n}\n\n# Initialize the distance array with -1 values\ndistance = [-1] * 4\n\n# Use Dijkstra's algorithm to find the shortest distance between vertices 0 and 3\ndistance[0] = 0\nq = [0]\nwhile q:\n    u = q.pop(0)\n    for v, weight in graph[u].items():\n        if distance[v] == -1:\n            distance[v] = distance[u] + weight\n            q.append(v)\n\n# The shortest distance between vertices 0 and 3 is 2\nprint(distance[3]) # Output: 2\n```",
+        "target": "7",
+        "inference_time": 5.730859994888306
+    },
+    {
+        "instruction": "You are given a\u00a02 x 2\u00a0integer matrix\u00a0board\u00a0where the cells are labeled from 1 to 4 in a\u00a0Boustrophedon style\u00a0starting from the bottom left of the board (i.e.\u00a0board[1][0]) and alternating direction each row. You start on square numbered\u00a01\u00a0of the board. In each move, starting from square\u00a0curr, do the following: \n1. Choose a destination square\u00a0next\u00a0with a label in the range\u00a0[curr + 1, min(curr + 6, 4)] \n2. If next has a snake or ladder, you must move to the destination of that snake or ladder. Otherwise, you move to\u00a0next.\n3. The game ends when you reach 4.\nOutput the minimum number of moves required to reach the square 4. If it is not possible to reach the square, return\u00a0-1",
+        "output": "```python\ndef min_moves(board):\n    # Create a dictionary to store the snake and ladder positions\n    snakes_and_ladders = {\n        (1, 2): [(1, 2)],\n        (2, 3): [(2, 3)],\n        (3, 4): [(3, 4)],\n        (4, 5): [(4, 5)],\n        (5, 6): [(5, 6)],\n        (6, 7): [(6, 7)],\n    }\n    \n    # Initialize the count of moves to 0\n    moves = 0\n    \n    # Keep moving until the destination is reached\n    while True:\n        # Get the current position\n        curr = board[0][0]\n        \n        # Check if there is a snake or ladder at the current position\n        if curr in snakes_and_ladders:\n            # Move to the destination of the snake or ladder\n            next = snakes_and_ladders[curr][0][0]\n            moves += 1\n            board[0][0] = next\n            board[0][1] = snakes_and_ladders[curr][1][0]\n            board[1][0] = snakes_and_ladders[curr][1][1]\n            board[1][1] = snakes_and_ladders[curr][1][2]\n            board[2][0] = snakes_and_ladders[curr][2][0]\n            board[2][1] = snakes_and_ladders[curr][2][1]\n            board[3][0] = snakes_and_ladders[curr][3][0]\n            board[3][1] = snakes_and_ladders[curr][3][1]\n            board[4][0] = snakes_and_ladders[curr][4][0]\n            board[4][1] = snakes_and_ladders[curr][4][1]\n            \n        # Check if the destination is reached\n        if curr == 4:\n            break\n        \n        # If the destination is not reached, move to the next position\n        else:\n            # Get the next position\n            next = board[0][0]\n            \n            # Move to the next position\n            moves += 1\n            board[0][0] = next\n            board[0][1] = snakes_and_ladders[next][0][0]\n            board[1][0] = snakes_and_ladders[next][0][1]\n            board[1][1] = snakes_and_ladders[next][0][2]\n            board[2][0] = snakes_and_ladders[next][1][0]\n            board[2][1] = snakes_and_ladders[next][1][1]\n            board[3][0] = snakes_and_ladders[next][2][0]\n            board[3][1] = snakes_and_ladders[next][2][1]\n            board[4][0] = snakes_and_ladders[next][3][0]\n            board[4][1] = snakes_and_ladders[next][3][1]\n            \n    # Return the minimum number of moves required to reach the square 4\n    return moves\n```",
+        "target": "1",
+        "inference_time": 19.849095344543457
+    },
+    {
+        "instruction": "Count the total number of persons.",
+        "output": "I'm sorry, but I cannot count the total number of persons as I am a text-based AI language model and do not have the ability to access or view images. However, I can provide you with the text-based description of the image.",
+        "target": "3",
+        "inference_time": 1.646230936050415
+    },
+    {
+        "instruction": "Is the following statement true or false? The largest planet is made mainly of ice.",
+        "output": "False. The statement \"The largest planet is made mainly of ice\" is false. According to the table in the image, the largest planet is Uranus, and it is made mainly of ice (68.33% ice, 31.67% gas).",
+        "target": "False",
+        "inference_time": 2.0258374214172363
+    },
+    {
+        "instruction": "Will these magnets attract or repel each other? Answer True for attract and False for repel.",
+        "output": "The magnets will repel each other.",
+        "target": "True",
+        "inference_time": 0.4090144634246826
+    },
+    {
+        "instruction": "Which month is the hottest on average in Rome?",
+        "output": "Based on the graph, it can be inferred that the hottest month on average in Rome is August.",
+        "target": "July and August",
+        "inference_time": 0.7626221179962158
+    },
+    {
+        "instruction": "Which month is the wettest on average in Christchurch?",
+        "output": "Based on the given information, the wettest month on average in Christchurch is May.",
+        "target": "May",
+        "inference_time": 0.7198543548583984
+    },
+    {
+        "instruction": "Which solution has a higher concentration of green particles?",
+        "output": "I'm sorry, but I'm not sure what the context of the instruction is. Could you please provide more information or clarify your question?",
+        "target": "Solution B",
+        "inference_time": 1.0254640579223633
+    },
+    {
+        "instruction": "Based on the Venn diagram, what things do Leonardo da Vinci and Michelangelo have in common?",
+        "output": "It is not clear what the instruction is asking for. Can you please provide more context or clarify the question?",
+        "target": "[late 15th-early 16th century, known for painting, from Florence]",
+        "inference_time": 0.8309731483459473
+    },
+    {
+        "instruction": "What is the color of the headphones present on the left side?",
+        "output": "The color of the headphones present on the left side is white.",
+        "target": "White",
+        "inference_time": 0.6478278636932373
+    },
+    {
+        "instruction": "Calculate the length of the hypotenuse of the right-angled triangle.",
+        "output": "```python\nimport math\n\n# get the length of the legs\na = 6\nb = 8\n\n# calculate the length of the hypotenuse using the Pythagorean theorem\nhypotenuse = math.sqrt(a**2 + b**2)\n\nhypotenuse\n```",
+        "target": "10",
+        "inference_time": 2.0150318145751953
+    },
+    {
+        "instruction": "Find the value of the expression denoted by question mark (?).",
+        "output": "The value of the expression denoted by the question mark (?) in the given image is 5.",
+        "target": "5",
+        "inference_time": 0.7946126461029053
+    },
+    {
+        "instruction": "Find the value of the expression denoted by question mark (?).",
+        "output": "The value of the expression denoted by the question mark (?) is 8.",
+        "target": "30",
+        "inference_time": 0.6628386974334717
+    },
+    {
+        "instruction": "According to the given schedule, what are you going to do at 11 am on Friday?",
+        "output": "I am going to go to the airport to meet Sam.",
+        "target": "go to the airport to meet Sam",
+        "inference_time": 0.520606279373169
+    },
+    {
+        "instruction": "Are the two balls touching each other? Answer in Yes or No.",
+        "output": "No.",
+        "target": "No",
+        "inference_time": 0.2535562515258789
+    },
+    {
+        "instruction": "Is there flag present? Answer in Yes or No.",
+        "output": "No.",
+        "target": "Yes",
+        "inference_time": 0.26209497451782227
+    },
+    {
+        "instruction": "Is the leftmost person holding a flag? Answer in Yes or No.",
+        "output": "Yes.",
+        "target": "Yes",
+        "inference_time": 0.22635698318481445
+    },
+    {
+        "instruction": "Find the value of blue cone.",
+        "output": "The value of the blue cone is 6.",
+        "target": "4",
+        "inference_time": 0.4759852886199951
+    },
+    {
+        "instruction": "What is the area of the given right angled triangle. You can use the formula A = 1/2 * b * h to calculate the area of the triangle. Output the numerical value only.",
+        "output": "The area of the given right angled triangle is 15 square centimeters.",
+        "target": "150",
+        "inference_time": 0.7815117835998535
+    },
+    {
+        "instruction": "Output the sum of numbers present in the given matrix.",
+        "output": "```Python\n\n# Define the matrix\nmatrix = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n]\n\n# Calculate the sum of the matrix\ntotal = sum(matrix)\n\n# Output the result\nprint(total) # Output: 20",
+        "target": "68",
+        "inference_time": 2.2734391689300537
+    },
+    {
+        "instruction": "Count the number of ocurrances of the word 'is' in the given paragraph.",
+        "output": "The word \"is\" appears twice in the given paragraph.",
+        "target": "1",
+        "inference_time": 0.6005785465240479
+    },
+    {
+        "instruction": "Find the value of question mark (?) in the given expression.",
+        "output": "```python\n# Given expression\nexp = 1 + 4 + 2 + 5 + 3 + 6 + 8 + 11\n\n# Find the value of question mark (?) in the expression\nquestion_mark_value = exp[7]\n\n# Print the value of question mark (?) in the expression\nprint(question_mark_value)\n```",
+        "target": "96",
+        "inference_time": 2.442861318588257
+    }
+]

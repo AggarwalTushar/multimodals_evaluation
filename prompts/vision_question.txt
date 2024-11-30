@@ -1,0 +1,2 @@
+Given below are some questions based on the image. Answer them one by one.
+{{questions}}

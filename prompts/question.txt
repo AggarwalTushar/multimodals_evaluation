@@ -1,0 +1,6 @@
+Following is a task based on some image. You need to output all the questions that can be answered using code and can lead to the solution of the following task.
+
+### Instruction: 
+{{instruction}}
+
+### Response:
